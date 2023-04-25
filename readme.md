@@ -10,9 +10,13 @@
 # Todo
 
 - [X] Init
-- [ ] RestAPI
-- [ ] CLI
-- [ ] WPF
+- [ ] UI
+  - [ ] RestAPI
+  - [ ] CLI
+  - [ ] WPF
+  - [ ] Web
+    - [ ] Razor pages
+    - [ ] React
 - [ ] Database
   - [ ] Providers
     - [ ] SQLite

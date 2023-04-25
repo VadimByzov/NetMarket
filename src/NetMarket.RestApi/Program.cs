@@ -1,8 +1,15 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using NetMarket.Core.Interfaces.Services;
+using NetMarket.Core.Services.Mocks;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddTransient<IProductService, MockProductService>();
+
+builder.Services.AddControllers();
 
 //#if DEBUG
 //    builder.Services.AddCors(options =>
@@ -29,5 +36,7 @@ app.MapGet("/connections/{name}", async (string name, IConfiguration configurati
 {
     return Results.Ok(new { connectionString = configuration.GetConnectionString(name) });
 }).RequireAuthorization();
+
+app.MapControllers();
 
 app.Run();
