@@ -1,4 +1,4 @@
-﻿
+﻿       
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMarket.Core", "src\NetMa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMarket.RestApi", "src\NetMarket.RestApi\NetMarket.RestApi.csproj", "{733591F0-7358-4713-A80D-F323AF470C61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetMarket.DataAccess", "NetMarket.DataAccess\NetMarket.DataAccess.csproj", "{0FB813D5-0DB4-4ED4-AB99-08F7926A6DCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetMarket.DataAccess", "src\NetMarket.DataAccess\NetMarket.DataAccess.csproj", "{0FB813D5-0DB4-4ED4-AB99-08F7926A6DCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
