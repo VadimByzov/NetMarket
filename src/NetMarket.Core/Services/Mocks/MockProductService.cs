@@ -37,5 +37,20 @@ namespace NetMarket.Core.Services.Mocks
         {
             return Task.Run(() => MockProducts.FirstOrDefault(p => p.Id == id) ?? throw new NullReferenceException());
         }
+
+        public Task<Product> Create(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Update(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

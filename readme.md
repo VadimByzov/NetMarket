@@ -10,8 +10,10 @@
 # Todo
 
 - [X] Init
+- [ ] Library
+  - [ ] Core
+  - [ ] RestApi
 - [ ] UI
-  - [ ] RestAPI
   - [ ] CLI
   - [ ] WPF
   - [ ] Web
