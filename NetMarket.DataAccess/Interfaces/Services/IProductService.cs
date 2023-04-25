@@ -1,6 +1,6 @@
-﻿using NetMarket.Core.Models;
+﻿using NetMarket.DataAccess.Model;
 
-namespace NetMarket.Core.Interfaces.Services
+namespace NetMarket.DataAccess.Interfaces.Services
 {
     public interface IProductService
     {

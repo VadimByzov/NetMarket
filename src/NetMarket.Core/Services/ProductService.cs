@@ -5,37 +5,81 @@ namespace NetMarket.Core.Services
 {
     public class ProductService : IProductService
     {
-        private IEnumerable<Product> _mockProducts;
+        private readonly DataAccess.Interfaces.Services.IProductService _dataProductService;
 
-        public ProductService()
+        public ProductService(DataAccess.Interfaces.Services.IProductService dataProductService)
         {
-            _mockProducts = new List<Product>
+            _dataProductService = dataProductService;
+        }
+
+        public async Task<IEnumerable<Product>> Get()
+        {
+            var products = await _dataProductService.Get();
+
+            return products.Select(x => new Product
             {
-                new()
-                {
-                    Id = 1,
-                    Name = "Computer",
-                    Description = "Gaming PC",
-                    Price = 1099.99m
-                },
-                new()
-                {
-                    Id = 2,
-                    Name = "Chair",
-                    Description = "Wood chair",
-                    Price = 89.99m
-                },
+                Id = x.Id,
+                Name = x.Name,
+                Description = x.Description,
+                Price = x.Price,
+            });
+        }
+
+        // TODO: make custom exception
+        public async Task<Product> Get(int id)
+        {
+            var product = await _dataProductService.Get(id);
+
+            if (product == null)
+            {
+                throw new Exception();
+            }
+
+            return new Product
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Description = product.Description,
+                Price = product.Price,
             };
         }
 
-        public Task<IEnumerable<Product>> Get()
+        public async Task<Product> Create(Product product)
         {
-            return Task.Run(() => _mockProducts);
+            var dataProduct = await _dataProductService.Create(new DataAccess.Model.Product
+            {
+                Name = product.Name,
+                Description = product.Description,
+                Price = product.Price
+            });
+
+            return new Product
+            {
+                Id = dataProduct.Id,
+                Name = dataProduct.Name,
+                Description = dataProduct.Description,
+                Price = dataProduct.Price,
+            };
         }
 
-        public Task<Product> Get(int id)
+        public async Task Update(Product product)
         {
-            return Task.Run(() => _mockProducts.FirstOrDefault(p => p.Id == id) ?? throw new NullReferenceException());
+            product = await Get(product.Id);
+
+            await _dataProductService.Update(new DataAccess.Model.Product
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Description = product.Description,
+                Price = product.Price,
+            });
+        }
+
+        public async Task Delete(int id)
+        {
+            var product = await _dataProductService.Get(id);
+
+            await _dataProductService.Delete(product.Id);
         }
     }
 }

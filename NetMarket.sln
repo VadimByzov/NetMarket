@@ -5,9 +5,11 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMarket.CLI", "src\NetMarket.CLI\NetMarket.CLI.csproj", "{FF919307-B283-41EC-8332-8AE58569F422}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetMarket.Core", "src\NetMarket.Core\NetMarket.Core.csproj", "{7808E1E2-1BC8-4EE4-8AAB-04DDF96F3D33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMarket.Core", "src\NetMarket.Core\NetMarket.Core.csproj", "{7808E1E2-1BC8-4EE4-8AAB-04DDF96F3D33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetMarket.RestApi", "src\NetMarket.RestApi\NetMarket.RestApi.csproj", "{733591F0-7358-4713-A80D-F323AF470C61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMarket.RestApi", "src\NetMarket.RestApi\NetMarket.RestApi.csproj", "{733591F0-7358-4713-A80D-F323AF470C61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetMarket.DataAccess", "NetMarket.DataAccess\NetMarket.DataAccess.csproj", "{0FB813D5-0DB4-4ED4-AB99-08F7926A6DCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{733591F0-7358-4713-A80D-F323AF470C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{733591F0-7358-4713-A80D-F323AF470C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{733591F0-7358-4713-A80D-F323AF470C61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FB813D5-0DB4-4ED4-AB99-08F7926A6DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FB813D5-0DB4-4ED4-AB99-08F7926A6DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FB813D5-0DB4-4ED4-AB99-08F7926A6DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FB813D5-0DB4-4ED4-AB99-08F7926A6DCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
