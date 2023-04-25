@@ -10,7 +10,7 @@ namespace NetMarket.Core.Interfaces.Services
 
         Task<Product> Create(Product product);
 
-        Task Update(Product product);
+        Task Update(int id, Product product);
 
         Task Delete(int id);
     }

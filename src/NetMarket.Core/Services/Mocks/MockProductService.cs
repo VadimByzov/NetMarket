@@ -43,7 +43,7 @@ namespace NetMarket.Core.Services.Mocks
             throw new NotImplementedException();
         }
 
-        public Task Update(Product product)
+        public Task Update(int id, Product product)
         {
             throw new NotImplementedException();
         }

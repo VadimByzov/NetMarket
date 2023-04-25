@@ -62,9 +62,9 @@ namespace NetMarket.Core.Services
             };
         }
 
-        public async Task Update(Product product)
+        public async Task Update(int id, Product product)
         {
-            product = await Get(product.Id);
+            product = await Get(id);
 
             await _dataProductService.Update(new DataAccess.Model.Product
             {

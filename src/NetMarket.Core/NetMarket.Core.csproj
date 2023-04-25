@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\NetMarket.DataAccess\NetMarket.DataAccess.csproj" />
+    <ProjectReference Include="..\NetMarket.DataAccess\NetMarket.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
