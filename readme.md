@@ -1,11 +1,11 @@
-# NetMarket
+# NetMarket :smiling_face_with_three_hearts:
 
 ## Contents
 
 - [Todo](#todo)
 - [.gitignore help](#gitignore-help)
 
-[:arrow_up: Contents](#contents)
+[:smiling_face_with_three_hearts: Contents](#contents)
 
 # Todo
 
@@ -35,11 +35,11 @@
   - [ ] Dockerfile
   - [ ] Docker compose
 
-[:arrow_up: Contents](#contents)
+[:smiling_face_with_three_hearts: Contents](#contents)
 
 ## .gitignore help
 
 https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
-[:arrow_up: Contents](#contents)
+[:smiling_face_with_three_hearts: Contents](#contents)
 
